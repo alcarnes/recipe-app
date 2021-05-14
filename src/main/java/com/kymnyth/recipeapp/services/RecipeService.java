@@ -5,10 +5,11 @@ import com.kymnyth.recipeapp.repositories.RecipeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 public interface RecipeService {
 
-    public List<Recipe> getRecipes();
+    public Set<Recipe> getRecipes();
 
-    public void setRecipes(List<Recipe> recipes);
+    public void setRecipes(Set<Recipe> recipes);
 }

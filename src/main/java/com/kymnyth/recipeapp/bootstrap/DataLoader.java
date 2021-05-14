@@ -11,9 +11,8 @@ import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+
 @Slf4j
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -38,7 +37,7 @@ public class DataLoader implements CommandLineRunner {
     private void loadData(){
 
         //Recipes
-        List<Recipe> recipes = new ArrayList<>(2);
+        Set<Recipe> recipes = new HashSet<>(2);
         log.debug("Creating UOMs");
         // Unit of Measures
         UnitOfMeasure optionalEach = unitOfMeasureService.getUnitOfMeasureByDesc("Each");
